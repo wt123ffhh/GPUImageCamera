@@ -1,7 +1,4 @@
-//
-//  WTCameraViewController.m
-//  MagicPhoto
-//
+
 //  Created by 吴桐 on 16/2/23.
 //  Copyright © 2016年 charmer. All rights reserved.
 //
@@ -168,15 +165,6 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     self.shutterTime = 0;
     [self setupGPUImageView];
     [self setupFunctionView];
-    
-    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-    NSString *appCurVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
-    if ([[[NSUserDefaults standardUserDefaults] stringForKey:@"QGCurVersion"]length]==0 ) {
-        [self setupFirstPage];
-        [[NSUserDefaults standardUserDefaults] setObject:appCurVersion forKey:@"QGCurVersion"];
-    }else {
-//        [self setupFirstPage];
-    }
     
     
 }
